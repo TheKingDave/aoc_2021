@@ -5,8 +5,10 @@ fn main() {
     let numbers: Vec<i32> = contents.lines().map(|s| s.parse().expect("NaN")).collect();
     let mut count = 0;
 
-    for i in 1..numbers.len() {
-        if numbers[i-1] < numbers[i] {
+    for i in 3..numbers.len() {
+        let prev = numbers[i-3] + numbers[i-2] + numbers[i-1];
+        let now = numbers[i-2] + numbers[i-1] + numbers[i];
+        if now > prev {
             count += 1;
         }
     }
