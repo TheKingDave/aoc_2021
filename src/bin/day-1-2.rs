@@ -1,7 +1,8 @@
 use std::fs;
 
 fn main() {
-    let contents = fs::read_to_string("input.txt").expect("intput.txt file not found");
+    let file_path = "inputs/input.1.txt";
+    let contents = fs::read_to_string(file_path).expect(&format!("{} file not found", file_path));
     let numbers: Vec<i32> = contents.lines().map(|s| s.parse().expect("NaN")).collect();
     let mut count = 0;
 
