@@ -12,7 +12,7 @@ fn main() {
                 *fish = 6;
                 to_add += 1;
             } else {
-                *fish = *fish - 1;
+                *fish -= - 1;
             }
         }
         for _i in 0..to_add {
